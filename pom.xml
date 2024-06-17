@@ -11,7 +11,7 @@
 
     <description>Exemplos de utilização do Mockito em projetos Java</description>
 
-   <url>https://github.com/HeloisaFelizardo/mockito-exemplos</url>
+    <url>https://github.com/HeloisaFelizardo/mockito-exemplos</url>
 
     <licenses>
         <license>
@@ -22,7 +22,7 @@
     </licenses>
 
     <organization>
-        <name>  Digital Innovation One</name>
+        <name>Digital Innovation One</name>
         <url>https://www.dio.me</url>
     </organization>
 
@@ -37,4 +37,45 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>5.1.1</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <argLine>-Xshare:off</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
